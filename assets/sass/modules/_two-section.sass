@@ -1,0 +1,65 @@
+.two-section
+
+
+
+.cheaper
+
+	&__cont
+		display: flex
+		justify-content: space-between
+
+	&-left
+		width: 48%
+		&__item
+			display: flex
+			align-items: center
+		&__img
+			width: 5vw
+			height: 4.6vw
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-shrink: 0
+
+	&-right
+		width: 50%
+		
+		&__video
+			padding: 10px
+			box-shadow: 0 15px 45px 2px rgba(81, 81, 81, 0.09)
+			border-radius: 5px
+			background-color: #ffffff
+			position: relative
+			&-text
+				position: absolute
+				left: 4vw
+				bottom: -3vw
+				display: flex
+				align-items: flex-end
+
+			&-block
+				height: 25vw
+				box-shadow: 0 15px 45px 2px rgba(81, 81, 81, 0.09)
+				border-radius: 5px
+				position: relative
+
+.arr
+	width: 7vw
+.video-p
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	border-radius: 100%
+	width: 4.5vw
+	height: 4.5vw
+	background-color: #c39656
+	background-image: linear-gradient(to top, #ffcc71 0%, #ffd1b2 100%)
+	padding: 1.5vw
+	display: flex
+	align-items: center
+	justify-content: center
+	animation: pulse2 1.5s infinite
+	transition: all 0.4s
+	&:hover
+		transform: translate(-50%, -50%) scale(1.1)

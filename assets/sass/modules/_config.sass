@@ -4,11 +4,11 @@ html
 	font-size: 10px
 	overflow-x: hidden
 body
-	font-family: "TT Norms", sans-serif
+	font-family: 'Museo Sans Cyrl', sans-serif
 	line-height: 1.2
-	font-weight: 500
+	font-weight: normal
 	overflow-x: hidden
-	color: #282828
+	color: #221916
 h1, h2, h3, h4, h5, h6
 	margin: 0
 	padding: 0
@@ -66,21 +66,10 @@ img
 	left: 50%
 	transform: translate(-50%,-50%)
 
-.gt
-	font-family: "Gotham Pro", sans-serif
+.fr
+	font-family: "Forum", sans-serif
 	font-weight: 700
-.tt
-	font-family: "TT Norms", sans-serif
-	font-weight: 500
-.sans
-	font-family: "Open Sans", sans-serif
-	font-weight: normal
-.ber
-	font-family: "BerlingskeSerif", sans-serif
-	font-weight: normal
-.mul
-	font-family: "Muller", sans-serif
-	font-weight: normal
+
 .media-center
 	@media (max-width: 567px)
 		text-align: center
@@ -109,7 +98,7 @@ img
 		&::before
 			border-bottom: 1px solid #5490d5
 .skew-text
-	position: relative;
+	position: relative
 	display: inline-flex
 	transform: skew(-8deg)
 	background-color: #5490d5
@@ -200,8 +189,6 @@ img
 	text-decoration: line-through
 .tdu
 	text-decoration: underline
-.gray
-	color: #777778
 
 .ttu
 	text-transform: uppercase
@@ -219,9 +206,18 @@ img
 	letter-spacing: .2vw
 .aqua
 	color: #38c2cc
-
+// new
+.nums
+	font-size: 5.2vw
+.poe
+	pointer-events: none
+.gray
+	color: #d6d6d6
+.tgc
+	color: #ffcc71
+// 
 .title
-	font-size: 2.23vw
+	font-size: 2.33vw
 	line-height: 1.3
 .order-rev
 	order: -1
@@ -231,10 +227,10 @@ img
 	margin: 0.2vw 0
 	background-color: #6dd168
 	border-radius: 5px
+
 .title-lg
-	font-size: 2.8vw
-	&.t-big
-		font-size: 3.6vw
+	font-size: 3.438vw
+
 .link-hover
 	transition: all .3s
 	&:hover
@@ -245,37 +241,28 @@ img
 // 30
 .t-min
 	font-size: 1.9vw
-	.tg
-		color: #379ab1
-	&.tgr
-		color: #0096d9
 .t-ss
 	font-size: 1.5vw
 
 .t-min2
 	font-size: 1.7vw
-	.tg
-		color: #379ab1
+
 
 // 36 //2.1
 .t-cir
 	font-size: 2.35vw
-	.tg
-		color: #379ab1
+
 
 // 16-17px
 .text
 	font-size: 0.97vw
-	.tg
-		color: #4389e6
+
 b
 	font-weight: 900
 // 18-19
 .text-md
 	font-size: 1.07vw
-	.tg
-		color: #48cf6e
-		font-weight: 900
+
 .tga
 	color: #ffc55b
 	letter-spacing: 0.75px
@@ -287,9 +274,7 @@ a.text-min
 // 14-15
 .small-text
 	font-size: 0.92vw
-	.tg
-		font-weight: 900
-		color: #88b332
+
 .tsm8
 	font-size: 0.51vw
 .tsm10
@@ -309,10 +294,7 @@ a.text-min
 // 21
 .text21
 	font-size: 1.2vw
-	.tg
-		color: #4186e1
-	&.tg
-		color: #4186e1
+
 .container
 	max-width: 90vw
 	margin: 0 auto
@@ -323,7 +305,7 @@ a.text-min
 		max-width: 85vw
 		margin: 0 auto
 	&-mm
-		max-width: 74vw
+		max-width: 70vw
 		margin: 0 auto
 	&-supm
 		max-width: 64vw
@@ -341,7 +323,7 @@ a.text-min
 	padding: 6vw 0
 	position: relative
 .btn
-	padding: 1.2vw 1vw
+	padding: 1.4vw 1vw
 	display: inline-flex
 	align-items: center
 	justify-content: center
@@ -349,21 +331,21 @@ a.text-min
 	z-index: 6
 	cursor: pointer
 	border: none
-	border-radius: 15px
-	background-image: linear-gradient(to top, #fbd542 0%, #fbd542 100%)
+	border-radius: 8px
+	background-color: #f4ad78
+	background-image: linear-gradient(to top, #ffcc71 0%, #ffd1b2 100%)
 	position: relative
-	color: #fff
-	box-shadow: 0 8px 13px rgba(#e3c03b, 0.49), inset 0 -4px 1px rgba(#e3c03b,1)
+	box-shadow: inset 0 -3px 1px rgba(#e28946,1)
 	//text-shadow: 0 1px 5px rgba(210, 110, 116, 0.49)
 	color: #282828
-	width: 100%
+	// width: 100%
 	&:not(:disabled) .btn-blick
 		position: absolute
 		left: 0
 		top: 0
 		width: 100%
 		height: 100%
-		border-radius: 30px
+		border-radius: 8px
 		overflow: hidden
 		&:after
 			margin-left: -30px
@@ -382,7 +364,7 @@ a.text-min
 			animation-iteration-count: infinite
 			transform: rotate(45deg)
 	&:hover
-		box-shadow: 0 8px 13px rgba(#e3c03b, 0.49), inset 0 4px 1px rgba(#e3c03b,1)
+		box-shadow: inset 0 3px 1px rgba(#e28946,1)
 		//transform: scale(1.1)
 	&.b-blue
 		background-image: linear-gradient(to top,#2accd6 0%, #2accd6 100%)
@@ -487,7 +469,7 @@ a.text-min
 	&:hover
 		color: #149456
 .link
-	color: #59ce71
+	color: #ffcc71
 	font-weight: 400
 	transition: all 0.4s
 	position: relative
@@ -499,7 +481,7 @@ a.text-min
 		top: 100%
 		width: 100%
 		height: 1px
-		border-bottom: 1px solid #59ce71
+		border-bottom: 1px solid #ffcc71
 		transform: translateX(-50%)
 		transition: all 0.4s
 	&:hover
