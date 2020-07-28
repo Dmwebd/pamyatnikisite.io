@@ -2802,7 +2802,22 @@ input::placeholder {
   pointer-events: auto;
 }
 
+.cheaper-px1 {
+  position: absolute;
+  width: 15vw;
+  left: -6vw;
+  top: 33vw;
+}
+
+.cheaper-px2 {
+  position: absolute;
+  width: 8vw;
+  right: 2vw;
+  top: 34vw;
+}
+
 .cheaper {
+  position: relative;
   padding-top: 2vw;
   padding-bottom: 2vw;
 }
@@ -2918,6 +2933,20 @@ input::placeholder {
   -webkit-transform: translate(-50%, -50%) scale(1.1);
   -ms-transform: translate(-50%, -50%) scale(1.1);
   transform: translate(-50%, -50%) scale(1.1);
+}
+
+.test-px1 {
+  position: absolute;
+  width: 5vw;
+  left: 7vw;
+  top: 36vw;
+}
+
+.test-px2 {
+  position: absolute;
+  width: 7vw;
+  right: 5vw;
+  top: 52vw;
 }
 
 .test {
