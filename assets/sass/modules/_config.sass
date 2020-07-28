@@ -1,0 +1,762 @@
+*
+	box-sizing: border-box
+html
+	font-size: 10px
+	overflow-x: hidden
+body
+	font-family: "TT Norms", sans-serif
+	line-height: 1.2
+	font-weight: 500
+	overflow-x: hidden
+	color: #282828
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	padding: 0
+
+a, button, input, textarea, select
+	outline: none
+ul
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+p
+	margin: 0
+img
+	max-width: 100%
+	max-height: 100%
+
+@media (max-width: 900px)
+	.forest
+		display: none
+.col-center
+	display: flex
+	justify-content: center
+	flex-direction: column
+	align-items: center
+.col-vcenter
+	display: flex
+	justify-content: center
+	flex-direction: column
+	align-items: flex-start
+.row-center
+	display: flex
+	justify-content: center
+	flex-direction: row
+	align-items: center
+
+.row-vcenter
+	display: flex
+	justify-content: flex-start
+	flex-direction: row
+	align-items: center
+.margin-center
+	margin-left: auto
+	margin-right: auto
+.rel-center
+	position: relative
+	left: 50%
+	transform: translateX(-50%)
+
+.abs-center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+
+.gt
+	font-family: "Gotham Pro", sans-serif
+	font-weight: 700
+.tt
+	font-family: "TT Norms", sans-serif
+	font-weight: 500
+.sans
+	font-family: "Open Sans", sans-serif
+	font-weight: normal
+.ber
+	font-family: "BerlingskeSerif", sans-serif
+	font-weight: normal
+.mul
+	font-family: "Muller", sans-serif
+	font-weight: normal
+.media-center
+	@media (max-width: 567px)
+		text-align: center
+.graf
+	animation: transform-shiver 5000ms linear 0ms infinite normal both
+
+
+.dotted
+	display: inline-flex
+	position: relative
+	transition: all .4s
+	justify-content: center
+	
+	&:before
+		content: ''
+		position: absolute
+		top: 105%
+		width: 100%
+		border-bottom: 1px dotted #5490d5
+		transition: all .4s
+	&:hover
+		color: #3a4d6a
+		&:before
+			width: 30%
+	&_l
+		&::before
+			border-bottom: 1px solid #5490d5
+.skew-text
+	position: relative;
+	display: inline-flex
+	transform: skew(-8deg)
+	background-color: #5490d5
+	padding: .5vw 1.2vw
+	border-radius: 5px
+	line-height: 1
+	&__block
+		transform: skew(8deg)
+	
+.fwn
+	font-weight: normal
+.fw1
+	font-weight: 100
+.fw2
+	font-weight: 200
+.fw3
+	font-weight: 300
+.fw4
+	font-weight: 400
+.fw5
+	font-weight: 500
+.fw6
+	font-weight: 600
+.fw7
+	font-weight: 700
+.fw8
+	font-weight: 800
+.fw9
+	font-weight: 900
+.fwb
+	font-weight: bold
+
+.z-i20
+	z-index: 20
+.green
+	color: #05de00
+
+.bgc
+	background-color: #f9f9f9
+.tal
+	text-align: left
+.rel
+	position: relative
+.lh
+	line-height: 1.5
+.lhm
+	line-height: 1.3
+
+.black
+	color: #000000
+.krem
+	color: #e0c59a
+.blue
+	color: #5490d5
+.red
+	color: #e53a30
+.mrlg
+	margin-right: 3.8vw
+.mrsm
+	margin-right: 2vw
+.mrm
+	margin-right: 0.5vw
+.mrs
+	margin-right: 0.3vw
+.mr
+	margin-right: 1vw
+
+.mlg
+	margin-bottom: 4.5vw
+.msm
+	margin-bottom: 2.4vw
+.mb
+	margin-bottom: 1.5vw
+.mbm
+	margin-bottom: 0.7vw
+.mbs
+	margin-bottom: 0.41vw
+
+.white
+	color: #fff
+.tac
+	text-align: center
+.tal
+	text-align: left
+.tar
+	text-align: right
+.tdt
+	text-decoration: line-through
+.tdu
+	text-decoration: underline
+.gray
+	color: #777778
+
+.ttu
+	text-transform: uppercase
+.zi0
+	z-index: 0 !important
+.zi1
+	z-index: 1 !important
+	position: relative
+.zi5
+	position: relative
+	z-index: 5 !important
+.black
+	color: #282828
+.l-sp
+	letter-spacing: .2vw
+.aqua
+	color: #38c2cc
+
+.title
+	font-size: 2.23vw
+	line-height: 1.3
+.order-rev
+	order: -1
+.tgg
+	display: inline-block
+	padding: 0.1vw 0.4vw
+	margin: 0.2vw 0
+	background-color: #6dd168
+	border-radius: 5px
+.title-lg
+	font-size: 2.8vw
+	&.t-big
+		font-size: 3.6vw
+.link-hover
+	transition: all .3s
+	&:hover
+		color: #31c7d1!important
+	&_2
+		&:hover
+			color: #31c7d1 !important
+// 30
+.t-min
+	font-size: 1.9vw
+	.tg
+		color: #379ab1
+	&.tgr
+		color: #0096d9
+.t-ss
+	font-size: 1.5vw
+
+.t-min2
+	font-size: 1.7vw
+	.tg
+		color: #379ab1
+
+// 36 //2.1
+.t-cir
+	font-size: 2.35vw
+	.tg
+		color: #379ab1
+
+// 16-17px
+.text
+	font-size: 0.97vw
+	.tg
+		color: #4389e6
+b
+	font-weight: 900
+// 18-19
+.text-md
+	font-size: 1.07vw
+	.tg
+		color: #48cf6e
+		font-weight: 900
+.tga
+	color: #ffc55b
+	letter-spacing: 0.75px
+a.text-min
+	color: #181818
+	transition: all 0.4s
+	&:hover
+		color: #ff7200
+// 14-15
+.small-text
+	font-size: 0.92vw
+	.tg
+		font-weight: 900
+		color: #88b332
+.tsm8
+	font-size: 0.51vw
+.tsm10
+	font-size: 0.61vw
+.tsm12
+	font-size: 0.75vw
+.tsm13
+	font-size: 0.85vw
+.ls56
+	letter-spacing: 0.56px
+// 24
+.text24
+	font-size: 1.4vw
+// 23
+.text23
+	font-size: 1.3vw
+// 21
+.text21
+	font-size: 1.2vw
+	.tg
+		color: #4186e1
+	&.tg
+		color: #4186e1
+.container
+	max-width: 90vw
+	margin: 0 auto
+	&-min
+		max-width: 81vw
+		margin: 0 auto
+	&-md
+		max-width: 85vw
+		margin: 0 auto
+	&-mm
+		max-width: 74vw
+		margin: 0 auto
+	&-supm
+		max-width: 64vw
+		margin: 0 auto
+	&-big
+		max-width: 85vw
+		margin: 0 auto
+
+
+
+.stop
+	overflow: hidden
+
+.section
+	padding: 6vw 0
+	position: relative
+.btn
+	padding: 1.2vw 1vw
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	transition: all 0.3s
+	z-index: 6
+	cursor: pointer
+	border: none
+	border-radius: 15px
+	background-image: linear-gradient(to top, #fbd542 0%, #fbd542 100%)
+	position: relative
+	color: #fff
+	box-shadow: 0 8px 13px rgba(#e3c03b, 0.49), inset 0 -4px 1px rgba(#e3c03b,1)
+	//text-shadow: 0 1px 5px rgba(210, 110, 116, 0.49)
+	color: #282828
+	width: 100%
+	&:not(:disabled) .btn-blick
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		border-radius: 30px
+		overflow: hidden
+		&:after
+			margin-left: -30px
+			content: " "
+			width: 30px
+			height: 300px
+			background: #fff
+			animation-delay: 0.05s
+			position: absolute
+			left: -40px
+			top: -150px
+			animation-timing-function: ease-in-out
+			transition: all 0.1s
+			animation-name: slideme
+			animation-duration: 3.5s
+			animation-iteration-count: infinite
+			transform: rotate(45deg)
+	&:hover
+		box-shadow: 0 8px 13px rgba(#e3c03b, 0.49), inset 0 4px 1px rgba(#e3c03b,1)
+		//transform: scale(1.1)
+	&.b-blue
+		background-image: linear-gradient(to top,#2accd6 0%, #2accd6 100%)
+		color: #ffffff
+	&.light
+		color: #191919
+		background-image: linear-gradient(to top, #ffe97e 0%, #fdf7ad 100%)
+		box-shadow: 0 8px 13px rgba(#d6ba5c, 0.49), inset 0 -4px 1px rgba(#d6ba5c,1)
+		&:hover
+			box-shadow: 0 8px 13px rgba(#d6ba5c, 0.49), inset 0 4px 1px rgba(#d6ba5c,1)
+	&.wt
+		color: #282828
+		background-image: linear-gradient(to top, #fff 0%, #fff 98%, #fff 100%), linear-gradient(to top, #fff 0%, #fff 98%, #fff 100%)
+		box-shadow: 0 8px 13px rgba(#d6d6d6, 0.49), inset 0 -4px 1px rgba(#d6d6d6,1)
+		&:hover
+			box-shadow: 0 8px 13px rgba(#d6d6d6, 0.49), inset 0 4px 1px rgba(#d6d6d6,1)
+	&.no-shadow
+		box-shadow: none
+		&:hover
+			transform: scale(1.05)
+	&.bord
+		background: transparent
+		border-radius: 20px
+		border: 1px solid #fbd542
+		box-shadow: none
+		display: inline-flex
+		&:hover
+			box-shadow: none
+		&.bdr
+			border: 1px solid #1491d0
+			background: #ffffff
+			box-shadow: 0px 0px 2px #1491d0
+			color: #1491d0
+			&:hover
+				box-shadow: 0px 0px 20px #1491d0
+	&.tgr
+		color: #fff
+		background-image: linear-gradient(to top, #d80733 0%, #fb5f45 100%), linear-gradient(to top, #ee858c 0%, #fabcbc 98%, #fabcbc 100%)
+		box-shadow: 0 8px 13px rgba(#a61c2e, 0.49), inset 0 -4px 1px rgba(#a61c2e,1)
+		&:hover
+			box-shadow: 0 8px 13px rgba(#a61c2e, 0.49), inset 0 4px 1px rgba(#a61c2e,1)
+	&.big
+		padding: 1.5vw 1vw
+	&.min
+		padding-top: 0.6vw
+		padding-bottom: 0.6vw
+	&-text
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		flex-direction: column
+
+.burger
+	width: 3rem
+	height: 4rem
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	// display: none
+	margin-left: 1rem
+	span
+		display: block
+		width: 100%
+		height: 4px
+		border-radius: 4px
+		position: relative
+		background-color: #f35b53
+		&:before, &:after
+			content: ''
+			position: absolute
+			display: block
+			width: 100%
+			height: 4px
+			left: 0
+			background-color: #f35b53
+			border-radius: 4px
+		&:before
+			top: -1rem
+		&:after
+			bottom: -1rem
+	&__wrap
+		text-transform: uppercase
+		font-size: 1.4rem
+		color: #f35b53
+		display: flex
+		align-items: center
+		font-weight: 600
+		cursor: pointer
+		display: none
+
+.close-nav
+	display: none
+
+
+.phone-link
+	font-weight: 500
+	font-size: 1vw
+	color: #44242E
+	transition: all 0.4s
+	&:hover
+		color: #149456
+.link
+	color: #59ce71
+	font-weight: 400
+	transition: all 0.4s
+	position: relative
+	display: inline-block
+	&:before
+		content: ""
+		position: absolute
+		left: 50%
+		top: 100%
+		width: 100%
+		height: 1px
+		border-bottom: 1px solid #59ce71
+		transform: translateX(-50%)
+		transition: all 0.4s
+	&:hover
+		&:before
+			width: 40%
+
+input::-webkit-input-placeholder 
+  color: #9f9f9f
+input:-ms-input-placeholder 
+  color: #9f9f9f
+input::-ms-input-placeholder 
+  color: #9f9f9f
+input::placeholder 
+  color: #9f9f9f
+.input
+	padding: 1.3vw 1vw
+	padding-left: 2vw
+	font-weight: 300
+	//border: 1px solid #bbbbbb
+	border-radius: 20px
+	box-shadow: none
+	border: 1px solid #ececec
+	background-color: #ffffff
+	color: #9f9f9f
+	align-self: center
+	width: 100%
+	position: relative
+	&.gray-inp
+		border: 1px solid #555461
+		background-color: #474651
+
+	&.t2
+		height: 4.7vw
+		box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2)
+		border-radius: 50px
+		background-color: #f2f2f2
+		border: none
+		font-weight: 30
+	&.inset
+		box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2)
+	&.t3
+		border-radius: 4px
+		height: 2.7vw
+	&.t4
+		height: auto
+		padding-left: 3vw
+		padding-top: 1vw
+		padding-bottom: 1vw	
+		border: none
+		background-color: #fff
+		border-bottom: 1px solid #dddddd
+		border-radius: 0
+	&.i-white
+		background-color: #f4f4f4
+		border: none
+		color: #303030
+		&::-webkit-input-placeholder 
+			color: #303030
+		&:-ms-input-placeholder 
+			color: #303030
+		&::-ms-input-placeholder 
+			color: #303030
+		&::placeholder 
+			color: #303030
+		
+
+	&.phone
+		background: url(../img/icons/input-ph.png) no-repeat center left 1.2vw, #fff
+		background-size: 1.4vw
+		padding-left: 3vw
+	&.phone_big
+		background: url(../img/icons/input-ph.png) no-repeat center left 1.2vw, #fff
+		background-size: 1.8vw
+		padding-left: 4vw
+	&.pers
+		background: url(../img/modals/pers.png) no-repeat center left 1.2vw, #fff
+		background-size: 1.8vw
+		padding-left: 4vw
+	&.mas
+		background: url(../img/icons/input-mas.png) no-repeat center left 1.2vw, #fff
+		background-size: 1.4vw
+		padding-left: 4vw
+	&.ws
+		background: url(../img/icons/input-ws.png) no-repeat center left 1.2vw, #fff
+		background-size: 1.8vw
+		padding-left: 4vw
+	&.date
+		background: url(../img/icons/date.png) no-repeat center left 1.2vw, #fff
+		background-size: 1vw
+		padding-left: 3vw
+	&.textarea
+		height: 10vw
+		padding-top: 1.5vw
+		padding-bottom: 1.5vw
+.inp-min
+	width: 31.5%
+.inp-md
+	width: 70%
+.inp-big
+	width: 100%
+	margin: 0.7vw 0
+.inp-half
+	width: 49%
+.input
+	&.inp-pd
+		height: 3.5vw
+		padding: 0.7vw 1.5vw
+
+.arrows
+	position: absolute
+	top: 50%
+	transform: translate(50%,-50%) scale(1)
+	width: 5vw
+	z-index: 18
+	transition: all 0.4s
+	cursor: pointer
+	border: none
+	background: transparent
+	z-index: 1	
+	&.no-center
+		top: 42%
+
+	&:hover
+		opacity: 1
+		transform: translate(50%,-50%) scale(1)
+		background-color: #38c2cc !important
+		svg
+			fill: #ffffff !important
+	
+.blag-arrow
+	width: 3vw
+	padding: .9vw
+	box-shadow: 0 0 68px rgba(40, 40, 40, 0.2)
+	border-radius: 15px
+	background-color: #ffffff
+	&.t2
+		width: 2.5vw
+		padding: 0.7vw
+		box-shadow: 0 6px 38px rgba(56, 194, 204, 0.5)
+		background-color: #a5d9dc
+		svg
+			fill: #fff !important
+	&.tl
+		left: 1vw
+	&.tr
+		right: 2.2vw
+	svg
+		transition: all .4s
+		fill: #aeaeae !important
+
+
+.slidePrev
+	left: -2vw
+	transform: translate(-50%,-50%) rotate(-180deg) scale(1)
+	&.t3
+		left: -.5vw
+		transform: translate(-50%, -50%) scale(1)
+	&:hover
+		transform: translate(-50%,-50%) rotate(-180deg) scale(1)
+
+.slideNext
+	right: -2vw
+	&.t3
+		right: -.5vw
+	&.t2
+		transform: translate(100%,-50%) scale(1)
+.white-space
+	white-space: nowrap
+
+.check
+	&-box
+		cursor: pointer
+		display: block
+	&-line
+		display: flex
+		align-items: center
+		a
+			color: #2995fc
+	&-label
+		width: 1vw
+		height: 1vw
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 0.2vw
+		position: relative
+		flex-shrink: 0
+		margin-right: .5vw
+		border-radius: 2px
+		background-color: #fbd542
+		&-act
+			transition: all 0.4s
+			transform: scale(0)
+		&.min
+			width: 1vw
+			height: 1vw
+			border-radius: 2px
+			border: 1px solid #dddddd
+			background-color: #fff
+
+	.tsm12
+		font-weight: 500
+.rhide
+	display: none
+	&:checked ~ span
+		.check-label
+			&-act
+				transform: scale(1)
+			&.min
+				background-color: #5bd273
+
+.labels
+	transform: skew(8deg)
+	&-wrap
+		padding: 0.6vw 0.8vw
+		border-radius: 5px
+		transform: skew(-8deg)
+		color: #fff
+		display: inline-block
+		background-color: #00c063
+		&.light
+			box-shadow: 7px 0 40px rgba(81, 81, 81, 0.2)
+			border: 1px dashed #dddddd
+			background-color: #ffffff
+			color: #747474
+
+.bg-line
+	background-image: linear-gradient(to bottom, transparent 0% , transparent 60%, #d3eeec 61% , #d3eeec 100%)
+
+
+// dots
+.slick-dots
+	bottom: -2vw
+.slick-dots li
+	width: 1vw
+	height: 1vw
+	margin: 0 .5vw
+.slick-dots li button
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 100%
+	height: 100%
+	padding: 0.5vw
+.slick-dots li button:before
+	content: ''
+	font-size: 1.1vw
+	width: 1vw
+	height: 1vw
+	background-color: #bebebe
+	border-radius: 4px
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	
+	
+.slick-dots li.slick-active button:before
+	background-color: #31c7d1
+	font-size: 1.25vw
+	width: 1.8vw
