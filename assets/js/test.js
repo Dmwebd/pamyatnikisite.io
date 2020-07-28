@@ -19,7 +19,7 @@ $element.on('change input', function (e) {
   btnActive(!isValid);
 
 });
-
+$('.num-all').text(maxNumber);
 function btnActive(isValid) {
   if(number === 0){
     btnPrev.prop('disabled', 'false');
@@ -42,57 +42,51 @@ function btnActive(isValid) {
 
 }
 
-inp ($('input[name="qw3"]'));
-inp ($('input[name="qw4"]'));
-inp ($('input[name="qw5"]'));
-function inp (name){
-  name.on('change input', function() {
 
-    if($(this).hasClass('lb-i')){
-      if($(this).prop('checked')){
-        $(this).parent().find('.vr').fadeIn();
+var lbs = false;
+$('.btn-lbs').on('click', function(event) {
+  event.preventDefault();
+  $(this).addClass('act');
+  
+  if(!lbs){
+    setTimeout(function(){
+      $('.btn-lbs').removeClass('act');
+      lbs = false;
+    }, 3000);
+    lbs = true;
+  }
 
-      }
-    }else{
-        name.each(function(index, el) {
-          if($(this).hasClass('lb-i')){
-            $(this).parent().find('.vr').fadeOut().val('');
-          }
-        });
-        
-      }
-  });
-}
-
+});
 
 // sidebar
 
-var $barLevel = 100 / (maxNumber);
-console.log(maxNumber);
-var $barWidth = $barLevel;
-function progress(num){
-  $('.progress__item').eq(num).addClass('active');
-}
-progress(0);
+var $barLevel = 100 / (maxNumber + 2);
+  var $barWidth = $barLevel;
+  function progress(num){
+    $(".progress-bar__line").css({"width": $barWidth + '%'});
+    // $('.pc').text(Math.floor($barWidth) + '%');
+  }
+  progress(0);
+
 
 
 // btn
 
 function btnClick() {
 
-  btnPrev.on('click', function(event) {
-    event.preventDefault();
-    --number;
+  // btnPrev.on('click', function(event) {
+  //   event.preventDefault();
+  //   --number;
 
-    $('.test-item').hide();
-    $('.test-item').eq(number).fadeIn(1000);
-    $(".progress__item").eq(number+1).removeClass('active');
-    $(".progress__item").eq(number).addClass('active');
-    btnActive(!isValid);
+  //   $('.test-item').hide();
+  //   $('.test-item').eq(number).fadeIn(1000);
+  //   $(".progress__item").eq(number+1).removeClass('active');
+  //   $(".progress__item").eq(number).addClass('active');
+  //   btnActive(!isValid);
 
 
-    animateTop ();
-  });
+  //   animateTop ();
+  // });
 
   btnNext.on('click', function(event) {
     event.preventDefault();
@@ -113,20 +107,19 @@ function btnClick() {
     $barWidth += $barLevel;
      $(".test-item").hide();
       $(".test-item").eq(number).fadeIn(600);
-      $(".test__right-wrap").hide();
-      $(".test__right-wrap").eq(number).fadeIn(500);
-    if(number === maxNumber - 2){
-      $(".r__title").text('Пожалуйста, введите свои данные, чтобы получить подарок');
+
+    if(number === maxNumber - 1){
+      $(".line-text").html('<b>Остался последний шаг</b>');
       $('.test__btns').hide();
-      $('.progress').hide();
+      // $('.progress').hide();
     }
     
-
+    $barWidth += $barLevel;
     progress(number);
 
     animateTop ();
     // $('.test-left-img').attr({'src': 'assets/img/test/a-'+ (number + 1) +'.png'});
-    $(".test-num-current").text(number + 1);
+    $(".num-current").text(number + 1);
     
 
   });
@@ -342,16 +335,3 @@ $('.close').on('click', function(event) {
 
 
 
-  $('input[name="qw5"]').on('change input', function(event) {
-    if($(this).hasClass('no-act')){
-      $(this).parents('.test-item').find('input').prop('checked', false);
-      $(this).prop('checked', true);
-    }else{
-      $(this).parents('.test-item').find('input').each(function(index, el) {
-        if($(this).hasClass('no-act')){
-          $(this).prop('checked', false);
-        }
-      });
-    }
-  
-  });
