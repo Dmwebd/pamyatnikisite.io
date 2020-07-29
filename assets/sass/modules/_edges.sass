@@ -1,0 +1,63 @@
+.edges
+    position: relative
+    padding: 4vw 0
+    padding-bottom: 8vw
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+    &__grob
+        position: absolute
+        width: 33vw
+        left: 24%
+        top: -4vw
+        z-index: 0
+    &__item
+        width: 30%    
+        z-index: 10
+        position: relative        
+        &_1
+            .edges__item-img
+                margin-top: -5vw
+        &_2
+            .edges__item-bl
+                min-height: 8vw
+                transform: translateY(50%)
+        &_3
+            .edges__item-img
+                margin-top: -3vw
+    &__item-bl
+        border-radius: 7px
+        border: 1px solid #bdbdbd
+        padding: 1vw
+        min-height: 10vw
+        justify-content: flex-end
+    &__item-img
+        width: 6vw
+    .plus-wrap
+        
+        &.p-1
+            left: 23%
+            top: 34%
+        &.p-2
+            top: 50%
+            left: 36%
+        &.p-3
+            left: 57%
+            top: 53%
+        &.p-4
+            left: 61%
+            top: 31%
+        &.p-5
+            left: 76%
+            top: 44%
+    .plus-text
+        background-color: #fff
+        color: #282828
+        z-index: 12
+        padding: 0.4vw .8vw
+        border-radius: 7px
+        transform: skew(-8deg)
+        &_sk
+            transform: skew(8deg)
+            position: relative
