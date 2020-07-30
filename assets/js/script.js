@@ -549,7 +549,7 @@ $('#portfolio-slider').slick({
     {
       breakpoint: 767,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         autoplay: false,
       }
     },
@@ -582,7 +582,7 @@ $('#feedback-slider').slick({
     {
       breakpoint: 767,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         autoplay: false,
       }
     },
