@@ -60,7 +60,7 @@ $('.btn-lbs').on('click', function(event) {
 
 // sidebar
 
-var $barLevel = 100 / (maxNumber + 2);
+var $barLevel = 100 / (maxNumber + 1);
   var $barWidth = $barLevel;
   function progress(num){
     $(".progress-bar__line").css({"width": $barWidth + '%'});
