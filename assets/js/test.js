@@ -60,7 +60,7 @@ $('.btn-lbs').on('click', function(event) {
 
 // sidebar
 
-var $barLevel = 100 / (maxNumber + 1);
+var $barLevel = 100 / (maxNumber + 2);
   var $barWidth = $barLevel;
   function progress(num){
     $(".progress-bar__line").css({"width": $barWidth + '%'});
@@ -157,26 +157,19 @@ $.fn.hasAttr = function(name) {
         'disabled': 'true'
       });
 
-      if(formThis.find('input[name="formname"]').val() === "price" ){
-        var link = document.createElement('a');
-        link.setAttribute('href', 'docs/price.pdf');
-        link.setAttribute('target', "_blank");
-        link.setAttribute('download','');
-
-        if(navigator.userAgent.indexOf('Mac') > 0){
-          window.location = 'docs/price.pdf';
-        }else{
-          simulate( link, "click");
-        }
+      if(formThis.find('input[name="formname"]').val() === "photo" ){
         $('html').addClass('stop');
         $(".overlay").fadeOut();
-        $("#modal-thank2").fadeIn();
-        formThis.find('.btn').removeAttr('disabled');
+        $("#modal-thank").fadeIn();
 
       }else if(formThis.find('input[name="formname"]').val() === "call" ){
         $('html').addClass('stop');
         $(".overlay").fadeOut();
-        $("#modal-thank").fadeIn();
+        $("#modal-info2").fadeIn();
+      }else if(formThis.find('input[name="formname"]').val() === "call2" ){
+        $('html').addClass('stop');
+        $(".overlay").fadeOut();
+        $("#modal-info3").fadeIn();
       }else if(formThis.find('input[name="formname"]').val() === "test" ){            
         formThis.find('input').attr({
           'disabled': 'true',
