@@ -294,6 +294,7 @@
 		width: 3rem
 		height: 3rem
 		padding: .9rem
+		box-shadow: 0 0 10px rgba(40, 40, 40, .2)
 		&.t2
 			width: 2.5rem
 			padding: 0.7rem
@@ -303,10 +304,71 @@
 			right: 2.2rem
 	.portfolio
 		padding: 4rem 0
-	
+	.info-slider__item
+		height: 20rem
 	//portfolio
-	//
-	
+
+	.info__block
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+	.info__right
+		width: 30rem
+	.info-slider__item
+		height: 20rem
+		box-shadow: 0px 0px 6px 0px rgba(3, 3, 5, 0.2)
+	.info__left
+		width: 100%
+		br
+			display: block !important
+	.info
+		padding: 4rem 0
+	.info__item
+		padding: 0.8rem
+		padding-bottom: 1rem
+		margin-bottom: 1.5rem
+	.info__img
+		height: 16vw
+	.info__header
+		margin-left: 0
+		text-align: center
+		font-size: 1.5rem
+	.feedback-slider__img
+		border-radius: 10px !important
+	.feedback__item
+		padding: 0.3rem
+		br
+			display: none
+	.feedback__wrap
+		padding-left: 0.8rem
+		padding-right: 0.5rem
+		padding-top: .5rem
+		padding-bottom: 0.5rem
+		min-height: 9rem
+	.feedback__num
+		font-size: 4rem
+	.modal__block
+		padding: 3rem 2rem
+	.modal-min
+		width: 30rem
+	.check-label
+		width: 1.2rem
+		height: 1.2rem
+		padding: 0.2rem
+		margin-right: 0.5rem
+	.contacts-item__img
+		width: 2.5rem
+		height: 2.5rem
+		padding: 0.57rem
+	.footer__soc-img.tgm
+		width: 1.5rem
+		height: 1.4rem
+	.modal .footer__soc-item
+		padding: 0.7rem 0.9rem
+	.footer__soc-img
+		width: 1.6rem
+		height: 1.7rem
 @media (max-width: 767px)
 	.title-lg
 		text-align: center
@@ -366,7 +428,12 @@
 		width: 47%
 
 	//kinds
-
+	.feedback__cont
+		flex-wrap: wrap
+	.feedback__item
+		width: 32%
+		margin-bottom: 1rem
+		
 
 
 @media (max-width: 567px)
@@ -512,3 +579,33 @@
 	.portfolio-slider__item
 		height: 57vw
 	// portfolio
+	.info__header
+		font-size: 1.4rem
+		
+	.info__left
+		font-size: 1.4rem
+		br
+				display: none !important
+	.info__item
+		width: 48%
+		.title
+			font-size: 3rem
+		br
+			display: block
+	.info__img
+		height: 30vw
+		margin-bottom: .7rem
+	.info-slider__item
+		height: 20rem
+	.info__text-bl
+		flex-direction: column
+		text-align: center
+		align-items: center
+		.tsm13
+			text-align: center
+	.feedback__item
+		width: 49%
+	.feedback__wrap
+		min-height: 10rem
+	.feedback-slider__item
+		padding: 0
