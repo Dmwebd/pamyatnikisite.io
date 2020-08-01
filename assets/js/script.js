@@ -640,36 +640,89 @@ $('.ltab-item').on('click', function (event) {
   }
 });
 
-$(".ktab__tab-item").on("click", function (event) {
-  event.preventDefault();
-  allCont = $('.ktab__tab-cont');
-  console.log('click');
-  
-  
-  singleCont = $('.single-js');
-  doubleCont = $('.double-js');
-  childCont = $('.child-js');
-  allCont.show();
-  if($(this).attr('data-order') === 'all'){
-    allCont.show();
-    $('.ktab__tab-item').removeClass('current-menu-item'); 
-    $(this).addClass('current-menu-item');
-  }else if($(this).attr('data-order') === 'single'){
-    allCont.hide();
-    singleCont.show();
-    $('.ktab__tab-item').removeClass('current-menu-item'); 
-    $(this).addClass('current-menu-item'); 
-  }else if($(this).attr('data-order') === 'double'){
-    allCont.hide();
-    doubleCont.show();
-    $('.ktab__tab-item').removeClass('current-menu-item'); 
-    $(this).addClass('current-menu-item');
-  }else if($(this).attr('data-order') === 'child'){
-    allCont.hide();
-    childCont.show();
-    $('.ktab__tab-item').removeClass('current-menu-item'); 
-    $(this).addClass('current-menu-item');
-  }
 
-  
+
+
+// ktab__tab-item
+
+$('.kinds__btn').on('click', function(event) {
+  event.preventDefault();
+  $(this).toggleClass('show');
+  if($(this).hasClass('show')){
+    var id = $(this).offset().top - 30;
+    $(this).addClass('show').find('.text').text('Скрыть');
+
+    itemFilter (100 , 100);
+    $('body,html').animate({scrollTop: id}, 200);
+  }else{
+   $(this).removeClass('show').find('.text').text('Открыть еще памятники');
+
+    itemFilter (1 , 6);
+
+    var id = $(".ktab").offset().top;
+    $('body,html').animate({scrollTop: id}, 600);
+  }
+});
+
+
+$('.ktab__tab-item').on('click', function(event) {
+  event.preventDefault();
+  if(!$(this).hasClass('current-menu-item')){
+    $('.ktab__tab-item').removeClass('current-menu-item');
+    $(this).addClass('current-menu-item');
+    t1 = $(this).text().trim();
+   itemFilter (1, 6);
+   $('.kinds__btn').removeClass('show').find('.text').text('Открыть еще памятники');
+  }
+});
+
+
+
+var t1 = $('.ktab__tab-item.current-menu-item').text().trim();
+
+
+var ns = 1;
+
+function itemFilter(num , num2){
+
+    dataTab (num2);
+
+}
+function dataTab (num2){
+  ns = 1;
+  $('.ktab__tab-cont').each(function(index, el) {
+    var tlt2 = $(this).data('order');
+      if( tlt2.toLowerCase().indexOf(t1.toLowerCase()) !== -1 ){
+        
+        if(ns > num2){
+          $(this).hide();
+        }else{
+          $(this).fadeIn();
+        }
+        ++ns;
+      }else{
+        $(this).hide();
+      }
+    }
+    
+  );
+
+}
+
+$('.ktab__tab-cont').each(function(index, el) {
+  if(index > 5){
+    $(this).hide();
+  }
+});
+
+
+$('.ktab__btn').on('click', function(event) {
+  event.preventDefault();
+  $('.overlay').hide();
+  $('#modal-fixed').fadeIn();
+  var tlt = $(this).parents('.ktab__tab-cont').find('.ktab__header').text().trim();
+  $('.it3-js').val(tlt);
+  // $('.t3-js').text(tlt);
+
+  $('html').addClass('stop');
 });
