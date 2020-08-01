@@ -17,8 +17,8 @@ $qw1 = $_POST['qw1'];
 $qw2 = $_POST['qw2'];
 $qw3 = $_POST['qw3'];
 $qw4 = $_POST['qw4'];
-$qw5 = $_POST['qw5'];
-$qw6 = $_POST['qw6'];
+$qw5 = $_POST['soc'];
+
 
 
 
@@ -49,13 +49,14 @@ $mail->CharSet = 'utf-8';
 // $mail->isSMTP(); 
 $mail->Host = 'smtp.gmail.com';  
 $mail->SMTPAuth = true;                      
-$mail->Username = ''; // Ваш логин в Яндексе. Именно логин, без @yandex.ru
-$mail->Password = ''; // Ваш пароль
+$mail->Username = 'formsajt987@gmail.com'; // Ваш логин в Яндексе. Именно логин, без @yandex.ru
+$mail->Password = '473-Ghd-%sasd121'; // Ваш пароль
 $mail->SMTPSecure = 'ssl';                            
 $mail->Port = 465;
-$mail->setFrom('', 'Форма с сайта'); // Ваш Email
+$mail->setFrom('formsajt987@gmail.com', 'Форма с сайта'); // Ваш Email
 $mail->addAddress('mintriy@yandex.ru'); // Email получателя
 // $mail->addAddress('example@gmail.com'); // Еще один email, если нужно.
+
 
 // Прикрепление файлов
   // for ($ct = 0; $ct < count($_FILES['userfile']['tmp_name']); $ct++) {
