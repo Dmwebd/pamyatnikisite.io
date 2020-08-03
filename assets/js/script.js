@@ -649,11 +649,11 @@ $('.kinds__btn').on('click', function(event) {
   event.preventDefault();
   $(this).toggleClass('show');
   if($(this).hasClass('show')){
-    var id = $(this).offset().top - 30;
+    var id = $(this).offset().top - 40;
     $(this).addClass('show').find('.text').text('Скрыть');
 
     itemFilter (100 , 100);
-    $('body,html').animate({scrollTop: id}, 200);
+    $('body,html').animate({scrollTop: id}, 100);
   }else{
    $(this).removeClass('show').find('.text').text('Открыть еще памятники');
 

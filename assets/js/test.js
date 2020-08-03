@@ -185,8 +185,8 @@ $.fn.hasAttr = function(name) {
           'disabled': 'true',
         });
 
-        $('.test-item').hide();
-        $('.test-final').show();
+        $('.test-cont').hide();
+        $('.test-thank').fadeIn();
         
       }else{
         $(".overlay").fadeOut();
